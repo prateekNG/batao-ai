@@ -1,0 +1,132 @@
+
+# Almost "everything" is an Object!
+
+***
+
+- _Each_ **_AI chat conversation_** _(thread) is a logical progression of common questions. Below each thread are the questions you should ask yourself when learning a concept._
+
+- _You are encouraged to try such conversations yourself. AI chat threads are highlighted with_ 📖 _(an open book)_.
+
+- **_Guided exercises_** _are highlighted with_🥊_(boxing_ gloves_). For exercises with AI,_ **_copy the first prompts and try the exercise yourself_**.
+
+- **_Tasks_** _are highlighted with_ 🚧 _(construction sign). Some of them are optional but will deepen your understanding of the concepts._
+
+***
+
+1. ## Why do we need objects?
+
+   1. 📖 Read the chat thread [here](https://chat.openai.com/share/46c5100f-77de-4b71-99dd-17f33f120a6b) that explains:
+
+      1. What problems do objects solve in programming?
+
+      2. How do objects help in organizing and managing data?
+
+      3. Can you give real-world examples where objects are useful?
+
+|    |                                                                                                                                             |
+| -- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🥊 | Let’s think of [real-world objects ](https://chat.openai.com/share/76e42f0e-b0cd-4fcb-822e-6de2a84699af)and their properties and methods.   |
+| 🥊 | [Let’s figure out the properties and methods](https://chat.openai.com/share/9c51792e-2eff-44fa-8059-3667e28726a9) of given objects with AI. |
+
+4. How do objects promote code _reusability_ and _maintainability_?
+
+5. How do objects facilitate _encapsulation_ and _abstraction_?
+
+|    |                                                                                                                                            |
+| -- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 🥊 | Understanding [encapsulation and abstraction with real-world objects](https://chat.openai.com/share/52c000cf-1614-4761-8f5d-000e19bc5215). |
+
+2. 🚧 Ask AI and try to learn the basic idea of _object-oriented programming_ by yourself.
+
+2) ## What are objects and how do you work with them?
+
+   1. 📖 [Basics of objects](https://chat.openai.com/share/c7d6ebdf-71d6-4d84-b5a4-4563a132ec2e) (chat thread)
+
+      1. What is the basic structure of an object in JavaScript?
+
+      2. How do objects store data using _key-value pairs_?
+
+      3. What are the properties and methods of an object?
+
+      4. How do you create and initialize objects in JavaScript using _object literal notation_?
+
+|    |                                                                                                                                                                                              |
+| -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🥊 | [Understand objects with code provided by AI](https://chat.openai.com/share/5c5dd49b-d9f1-4e67-ac10-b4d40d3c9a9a). Give some real-world objects and observe possible properties and methods. |
+| 🥊 | [Let’s code the objects yourself](https://chat.openai.com/share/f74a9ee1-40c2-4c7a-9450-e29917ac7815). AI will prompt you with real-world objects and provide feedback on your code.         |
+
+5. How do you access object properties and methods using _dot notation_ and _bracket notation_?
+
+|    |                                                                                                                                              |
+| -- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🥊 | Accessing the properties of an object using [dot and bracket notations](https://chat.openai.com/share/9252b944-b127-4c6a-afd7-fdee19e23b55). |
+
+2. 📖 [Manipulating objects](https://chat.openai.com/share/ce78f5b6-6508-40a0-b5b8-b1f93f3433cd) (chat thread)
+
+   1. How do you add, modify, or delete properties and methods of an existing object?
+
+|    |                                                                                                                        |
+| -- | ---------------------------------------------------------------------------------------------------------------------- |
+| 🥊 | Modify and manipulate objects with [AI challenge](https://chat.openai.com/share/4220c8c7-cceb-4df9-82ad-8f353633107e). |
+
+2. How do you loop over object properties?
+
+   1. What is the _for-in_ loop?
+
+   2. What are the _keys, values, and entry_ methods of an object?
+
+   3. When to use which approach?
+
+3. How do you delete a property of an Object?
+
+4. How to check whether an object has a property?
+
+|    |                                                                                                                      |
+| -- | -------------------------------------------------------------------------------------------------------------------- |
+| 🥊 | [AI practice](https://chat.openai.com/share/9aebd8fa-ac05-47d0-9e01-6047076d7622) on working with object properties. |
+
+3. 📖 The [_undefined_](https://chat.openai.com/share/29be94f5-0411-477b-b6a1-94df681a93dc) keyword
+
+   1. What happens when you access a property that does not exist?
+
+   2. How does the _undefined_ keyword help us in programming when working with objects?
+
+4. 📖 The [_this_](https://chat.openai.com/share/59af0e63-777a-49c2-bc8e-71210cda8f5f) keyword
+
+   1. What is the need for _this_ keyword?
+
+   2. How does it make code flexible and cleaner?
+
+5. 🚧 What are some other ways of creating objects other than object literals? Find and understand with the help of AI.
+
+6. 🚧 Make use of AI to understand object _prototypes_ and what is a _prototype chain_. (optional)
+
+3) ## Common mistakes and misconceptions about objects.
+
+   1. Misunderstanding Dot Notation and Bracket Notation.
+
+   2. Assuming Objects Are Always Passed by Reference.
+
+   3. Confusion Between Object and Array Methods: Thinking that objects can be manipulated in the same way as arrays, leading to errors or unexpected results.
+
+   4. Misunderstanding of Object Cloning: Using assignment (=) to copy an object, resulting in a shallow copy where nested objects are still referenced. Believing that assignment creates a deep copy of an object, leading to unintentional shared references between objects.
+
+   5. Incorrect Use of this Keyword.
+
+   6. Overlooking Object Property Enumeration: Assuming that object properties are iterated in a specific order when using for...in the loop, leading to unreliable code.
+
+   7. Neglecting Prototype Chain in Inheritance: Modifying properties or methods of a parent object directly, unintentionally affecting all child objects sharing the same prototype. (optional)
+
+4) ## Let’s put our knowledge to the test.
+
+   1. 🥊Test the [basic understanding of the concepts](https://chat.openai.com/share/eeb240cc-dbbe-45f2-9cc1-c87279afadb3) and theory.
+
+   2. 🥊[Create real-world scenarios and design objects](https://chat.openai.com/share/1504ef59-b271-434e-8df2-17f4ff60a3a2) to represent entities within it. (e.g., creating objects to model a car, a student, or a book)
+
+   3. 🥊Practice [coding problems](https://chat.openai.com/share/aafa50d1-98a1-4312-a3d5-b902a3584d8a) creating functional objects with different properties and methods. (e.g., coding problems involving object creation and manipulation)
+
+   4. 🥊[Identify and correct errors](https://chat.openai.com/share/3293899e-b1eb-4bf2-99ca-c2fb1acb7db4) in given object implementations. (e.g., debugging exercises where learners fix mistakes in object-related code)
+
+   5. 🥊Check your understanding of objects through [multiple-choice questions](https://chat.openai.com/share/970fdf89-67d7-497e-abd9-1c185cc4a3a1). (e.g., quiz questions to assess comprehension of object concepts)
+
+   6. 🥊Read the code and [figure out the output](https://chat.openai.com/share/27a81e00-527e-43e4-8114-0bfca4743fa6) of a given code snippet.

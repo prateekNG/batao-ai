@@ -1,0 +1,406 @@
+Problem statement,"Question Category 
+(1, 2 or 3)",Weightage
+"Akansha is currently standing at stair 0 and she wants to reach stair numbered X.
+
+Akansha can climb either Y steps or 1 step in one move.
+Find the minimum number of moves required by her to reach exactly the stair numbered X.
+
+Input Format
+ single line of input containing two space-separated integers X and Y denoting the number of stair Akansha wants to reach and the number of stairs she can climb in one move.
+
+Output Format
+output the minimum number of moves required by her to reach exactly the stair numbered X.
+
+Constraints
+1 ≤ X ≤ 500
+1 ≤ T ≤ 500
+1 ≤ X, Y ≤ 100
+
+
+Testcase 1:
+Input:
+4 2
+Output:
+2
+
+Testcase 2:
+Input:
+8 3
+Output:
+4
+
+Testcase 3:
+Input:
+3 4
+Output:
+3
+
+Explanation:
+Test case 1: Chef can make 2 moves and climb 2 steps in each move to reach stair numbered 4.
+
+Test case 2: Chef can make a minimum of 4 moves. He can climb 3 steps in 2 of those moves and 1 step each in remaining 2 moves to reach stair numbered 8.
+
+Test case 3: Chef can make 3 moves and climb 1 step in each move to reach stair numbered 3.
+
+",1,10 Marks
+"There are N items in a shop. You know that the price of the i-th item is Ai. Rithesh wants to buy all the N items.
+
+There is also a discount coupon that costs X rupees and reduces the cost of every item by Y rupees. If the price of an item was initially less than or equal to Y, it becomes free, i.e., costs 0.
+
+Determine whether Rithesh should buy the discount coupon or not. Rithesh will buy the discount coupon if and only if the total price he pays after buying the discount coupon is strictly less than the price he pays without buying the discount coupon.
+
+Input Format
+The first line  contains three space-separated integers — N, X, and Y.
+The second line contains N space-separated integers — A1, A2, …, AN.
+
+Output Format
+For each test case, output COUPON if Rithesh should buy the discount coupon, and NO COUPON otherwise.
+Each letter of the output may be printed in either lowercase or uppercase. For example, the strings coupon, CouPoN, and COUPON will all be treated as equivalent.
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ N ≤ 100
+1 ≤ X, Y ≤ 10^5
+1 ≤ Ai ≤ 10^5
+
+Testcase 1:
+Input:
+4 30 10
+15 8 22 6
+Output:
+COUPON
+
+Testcase 2:
+Input:
+4 40 10
+15 8 22 6
+Output:
+NO COUPON
+
+Testcase 3:
+Input:
+4 34 10
+15 8 22 6
+Output
+NO COUPON
+
+Explanation:
+Test case 1: The original cost of the items is 15 + 8 + 22 + 6 = 51. Buying the coupon costs 30, and after buying it, the cost of buying all the items is 5 + 0 + 12 + 0 = 17. The total cost of buying everything with the coupon is 30 + 17 = 47, which is strictly less than 51. So, Chef will buy the coupon.
+
+Test case 2: The original cost of the items is 15 + 8 + 22 + 6 = 51. Buying the coupon costs 40, and after buying it, the cost of buying all the items is 5 + 0 + 12 + 0 = 17. The total cost of buying everything with the coupon is 40 + 17 = 57, which is more than 51. So, Chef will not buy the coupon.",3,20 Marks
+"Each pizza consists of 4 slices. There are T friends and each friend needs exactly X slices.
+
+Find the minimum number of pizzas they should order to satisfy their appetite.
+
+Input Format:
+Each test case consists of two integers N and X, the number of friends and the number of slices each friend wants respectively.
+
+Output Format:
+For each test case, output the minimum number of pizzas required.
+
+Constraints:
+1 ≤ N, X ≤ 10
+
+
+Testcase 1:
+Input:
+1 5
+Output:
+2
+
+Testcase 2:
+Input:
+2 3
+Output:
+2
+
+Testcase 3:
+Input:
+4 3
+Output:
+3
+
+Explanation of Test Cases:
+
+Testcase 1:
+Input: There is 1 friend who needs 5 slices.
+Output: 2
+Explanation
+Since each pizza has 4 slices, at least 2 pizzas are needed to provide 5 slices.
+
+Testcase 2:
+Input: There are 2 friends, each needing 3 slices.
+Output: 2
+Explanation
+since each pizza has 4 slices, 2 pizzas are needed to provide 6 slices, enough for 2 friends.
+
+Testcase 3:
+Input: There are 4 friends, each needing 3 slices.
+Output: 3
+Explanation
+To provide 12 slices, at least 3 pizzas are needed.
+",1,10 Marks
+"Write a JavaScript program to count all prime numbers between 1 and N.
+
+Input:
+An integer N (1 ≤ N ≤ 10^6), denoting the upper limit.
+
+Output:
+An integer representing the count of prime numbers between 1 and N, inclusive.
+
+
+Input: N = 10
+Expected Output: 4
+Explanation: There are 4 prime numbers between 1 and 10: 2, 3, 5, and 7.
+
+Input: N = 20
+Expected Output: 8
+Explanation: There are 8 prime numbers between 1 and 20: 2, 3, 5, 7, 11, 13, 17, and 19.
+
+Input: N = 30
+Expected Output: 10
+Explanation: There are 10 prime numbers between 1 and 30: 2, 3, 5, 7, 11, 13, 17, 19, 23, and 29.
+",2,20 Marks
+"Komal wants to find the highest and lowest temperatures recorded in a no.of days . Write a program to assist her.
+
+Input:
+The input consists of two lines:
+The first line contains an integer n representing the number of days .
+The second line contains n integers separated by space, representing the temperatures recorded on each day.
+
+Output:
+Print two integers separated by space:
+The highest temperature recorded in the n number of days .
+The lowest temperature recorded in the n number of days .
+
+Testcase 1:
+Input:
+6
+25 17 22 30 15 20
+Output:
+30 15
+
+Testcase 2:
+Input:
+7
+32 28 30 35 29 31 33
+Output:
+35 28
+
+Testcase 3:
+Input:
+1
+20
+Output:
+20 20
+
+Explanation:
+Testcase 1:
+Input: Komal recorded temperatures for 6 days: 25, 17, 22, 30, 15, 20.
+Output: The highest temperature recorded is 30, and the lowest temperature recorded is 15.
+Testcase 2:
+Input: Komal recorded temperatures for 7 days: 32, 28, 30, 35, 29, 31, 33.
+Output: The highest temperature recorded is 35, and the lowest temperature recorded is 28.
+Testcase 3:
+Input: Komal recorded temperatures for 1 day: 20.
+Output: Since there's only one temperature recorded, both the highest and lowest temperatures are 20.",3,20 Marks
+"John earns a salary and is subject to different tax rates based on his income. The tax rates are as follows:
+
+Up to 10,000: 5% tax
+10,001 to 20,000: 10% tax
+20,001 to 30,000: 15% tax
+Above 30,000: 20% tax
+Write a program that prompts John to enter his income and calculates the amount of tax he owes.
+
+Input:
+An integer representing John's income.
+
+Output:
+amount of tax John owes represented in one line
+
+John's income will be a non-negative integer.
+
+Testcase 1:
+Input:
+8,000.
+Output:
+400
+
+Testcase 2:
+Input:
+15,000
+Output:
+ 1500
+
+Testcase 3:
+Input:
+25,000
+Output:
+3750",1,10 Marks
+"You are given an integer N representing the number of seconds. Write a program to convert the given number of seconds into hours, minutes, and remaining seconds.
+
+Input:
+The input consists of a single integer N (1 ≤ N ≤ 10^9) representing the number of seconds.
+
+Output:
+Output three integers separated by a space representing the hours, minutes, and remaining seconds respectively.
+
+Testcase 1:
+Input:
+3665
+Output:
+1 1 5
+
+Testcase 2:
+Input:
+876
+Output:
+0 14 36
+
+Testcase 3:
+Input:
+24367
+Output:
+6 46 7",2,20 Marks
+"
+
+Pooja has scored X marks in her test and Komal has scored Y marks in the same test. Pooja is happy if she scored at least twice the marks of Komal’s score. Determine whether she is happy or not.
+
+Input Format:
+The first and only line of input contains two space-separated integers X, Y — the marks of Pooja and Komal respectively.
+
+Output Format:
+For each testcase, print Yes if Pooja is happy and No if she is not, according to the problem statement.
+
+The judge is case insensitive so you may output the answer in any case. In particular YES, yes, yEs are all considered equivalent to Yes.
+
+Constraints:
+1 ≤ X, Y ≤ 100
+
+Test Case 1:
+Input: 
+10  5
+Output: 
+Yes
+
+Test Case 2:
+Input:
+8 8
+Output: 
+No
+
+
+Test Case 3:
+Input: 
+15  6
+Output: 
+Yes",1,10 Marks
+"Samantha is saving money for a new bicycle. Each week, she spends S rupees amount from her pocket money and receives a pocket money of A rupees amount from her parents weekly. She wants to determine how many weeks it will take for her to save enough money to buy the bicycle, which costs C rupees.
+
+Write a program to help Samantha calculate the number of weeks needed to save enough money for the bicycle.
+
+Input:
+The input consists of three integers separated by spaces:
+The first integer, C represents the cost of the bicycle.
+The second integer, S represents the amount Samantha spends each week from her pocket money.
+The third integer, A represents Samantha's weekly pocket money from her parents.
+
+Output:
+a single integer representing the number of weeks needed for Samantha to save enough money to buy the bicycle.
+
+
+Test Case 1:
+Input: 1000 50 200
+Output: 7
+
+Testcase 2:
+Input: 1500 200 300
+Output: 15
+
+Test case 3:
+Input: 2000 150 200
+Output: 40:
+",2,20 Marks
+"Sujal visited a grocery store for fresh supplies. There are N items in the store where the ith item has a freshness value Ai and cost Bi.
+
+Sujal has decided to purchase all the items having a freshness value greater than or equal to X. Find the total cost of the groceries Sujal buys.
+
+Input Format:
+The first line of input will contain a single integer T, denoting the number of test cases. Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers N and X — the number of items and the minimum freshness value an item should have.
+The second line contains N space-separated integers, the array A, denoting the freshness value of each item.
+The third line contains N space-separated integers, the array B, denoting the cost of each item.
+
+Output Format:
+For each test case, output on a new line, the total cost of the groceries Sujal buys.
+
+Constraints:
+1 ≤ T ≤ 100
+1 ≤ N, X ≤ 100
+1 ≤ Ai, Bi ≤ 100
+
+Input:
+4
+2 20
+15 67
+10 90
+
+3 1
+1 2 3
+1 2 3
+
+3 100
+10 90 50
+30 7 93
+
+
+Output:
+90
+6
+0
+",3,20 Marks
+"Alice and Bob are playing a game. Each player rolls a regular six faced dice 3 times. The score of a player is the sum of the values of the highest 2 rolls. The player with the highest score wins, and the game ends in a Tie if both players have the same score.
+
+Input Format
+Each test case contains six space-separated integers A1, A2, A3, B1, B2, and B3 — the values Alice gets in her 3 dice rolls, followed by the values which Bob gets in his 3 dice rolls.
+
+Output Format
+For each test case, output on a new line Alice if Alice wins, Bob if Bob wins and Tie in case of a tie.
+
+Note that you may print each character in uppercase or lowercase. For example, the strings tie, TIE, Tie, and tIe are considered identical.
+
+Constraints
+
+1 ≤ T ≤ 10^4
+1 ≤ A1, A2, A3, B1, B2, B3 ≤ 6
+
+
+
+Testcase 1:
+Input:
+3 2 5 6 1 1
+Output:
+Alice
+
+Testcase 2:
+Input:
+4 4 5 6 4 1
+Output:
+Bob
+
+Testcase 3:
+Input:
+6 6 6 6 6 1
+Output:
+Tie
+
+Explanation:
+
+Test Case 1:
+Alice's score is 8 = (3 + 5) which is greater than Bob's score 7 = (6 + 1).
+
+Test Case 2:
+Alice's score is 9 = (5 + 4) which is less than Bob's score 10 = (6 + 4).
+
+Test Case 3:
+Alice's score is 12 = (6 + 6) which is the same as Bob's score 12 = (6 + 6).",1,10 Marks

@@ -1,0 +1,19 @@
+Explain the below example and code snippet, explain what are symbols and what exactly are we doing in the below code. I'm new to programming and javascript, I've learned basics of Js, learn ES6 standards now:
+
+A symbol used for a method to add custom iterator behavior:
+
+let collection = {
+    items: [],
+    [Symbol.iterator]() {
+        let index = 0;
+        return {
+            next: () => {
+                let done = index >= collection.items.length;
+                let value = !done ? collection.items[index++] : undefined;
+                return { value, done };
+            }
+        };
+    }
+};
+// Can be iterated with for...of loop
+

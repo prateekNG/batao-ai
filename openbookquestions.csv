@@ -1,0 +1,246 @@
+id,Problem statement,"Question Category 
+(1, 2 or 3)",Marks
+As1Q1,"Write a JavaScript program or code that takes three numbers as input. If all three numbers are equal, print the product of the numbers. If any two numbers are equal, add them together and print the remainder after dividing the sum by the third number. If no two numbers are equal, determine the highest among them and print its square. In case of two equal number, if the third number is zero, print ""not a number"" as output.
+
+Test Cases:
+Input: 2, 2, 2
+Output: 8
+
+Input: 3, 3, 5
+Output: 1
+
+Input: 6, 8, 4
+Output: 64
+
+Input: 5, 5, 0
+Output: not a number",1,10 Marks,,,,
+As1Q2,"Write a JavaScript program that takes a positive integer as input and checks if it is a perfect number. A perfect number is a positive integer where the sum of its factors (excluding itself) equals the number itself. Factors are whole numbers that you can multiply together to get the given number. For example, 6 is a perfect number because the sum of its factors (1, 2, and 3) equals 6.
+
+Your program should output ""Perfect"" if the input number is perfect, and ""Not Perfect"" otherwise.
+
+Test Cases:
+
+Input: 6
+Output: Perfect
+Explanation:
+6 is a perfect number because 1 + 2 + 3 = 6.
+
+Input: 1
+Output: Not Perfect
+Explanation: 1 is not considered a perfect number because its only factor is itself, which is not included in the sum.
+
+Input: 28
+Output: Perfect
+Explanation:
+28 is a perfect number because 1 + 2 + 4 + 7 + 14 = 28.
+
+Input: 12
+Output: Not Perfect
+Explanation:
+12 is not a perfect number because the sum of its factors (1, 2, 3, 4, and 6) does not equal 12.",2,20 Marks,,,,
+As1Q3,"Write a JavaScript program that takes two arrays of integers as input. The program should find and print the common elements between the two arrays. The arrays have unique elements.
+Test Cases:
+Input: [2, 4, 6, 8], [4, 8, 12, 16]
+Output: [4, 8]
+
+Input: [1, 3, 5, 7], [7, 9, 11, 13]
+Output: [7]
+
+Input: [10, 20, 30], [40, 50, 60]
+Output: []",3,20 Marks,,,,
+As2Q4,"Write a JavaScript program that takes a positive integer n as input. The program should print the sum of the squares of the first n natural numbers using a while loop.
+Test Cases:
+Input: 5
+Output: 55 (1^2 + 2^2 + 3^2 + 4^2 + 5^2)
+
+Input: 7
+Output: 140 (1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2 + 7^2)
+
+Input: 10
+Output: 385 (1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2 + 7^2 + 8^2 + 9^2 + 10^2)",1,10 Marks,,,,
+As2Q5,"Write a javascript program to find GCD of three numbers.the GCD of two or more numbers is the largest number that divides each of them without leaving a remainder
+
+Test cases
+Input 1: a=3 , b=5 , c=7 
+output: 1
+
+Input 2: a=4, b=2, c=6
+output: 2
+
+
+Input 3: a=34, b=68 , c=17
+output: 17
+
+",2,20 Marks,,,,
+As2Q6,"Write a JavaScript program that takes an array of integers as input and prints true if the array is a palindrome, and false otherwise. An array is considered a palindrome if it reads the same forwards and backwards. Implement the function without using any built-in methods.
+
+Test Cases:
+
+Input: [1,2,1]
+Output: True
+
+Input: [2,4,6,8,4,2]
+Output: False
+
+Input: [1,4]
+Output: False
+
+Input: [3,,4,3,4]
+Output: false
+",3,20 Marks,,,,
+As3Q7,"Write a JavaScript program that takes three integers as input and categorizes them based on their properties:
+If all three numbers are equal, print ""All Equal"".
+If two numbers are equal, print ""Two Equal"".
+If all three numbers are different, determine the largest among them:
+If the largest number is even, print ""Largest Even"".
+If the largest number is odd, print ""Largest Odd"".
+
+Test Cases:
+
+Input: 2, 2, 2
+Output: All Equal
+
+Input: 3, 3, 5
+Output: Two Equal
+
+Input: 6, 8, 4
+Output: Largest Even
+Explanation: all are different and the largest number is 8 (even)
+
+Input: 7, 5, 9
+Output: Largest Odd
+Explanation: all are different and the largest number is 9 (odd)",1,10 Marks,,,,
+As3Q8,"Write a JavaScript program that takes a positive integer n as input. The program should calculate and print the sum of the squares of even natural numbers and the sum of the cubes of odd natural numbers, from 1 to n using a while loop.
+
+Natural numbers: Natural numbers are the counting numbers starting from 1, such as 1, 2, 3, 4, 5, and so on.
+
+Test Cases:
+
+Input: 5
+Output:
+Total sum: 173
+Explanation:
+Sum of squares of even numbers: 2^2 + 4^2 = 20
+Sum of cubes of odd numbers: 1^3 + 3^3 + 5^3 = 1 + 27 + 125 = 153
+
+Input: 7
+Output:
+Total sum: 552
+Explanation:
+Sum of squares of even numbers: 2^2 + 4^2 + 6^2 = 56
+Sum of cubes of odd numbers: 1^3 + 3^3 + 5^3 + 7^3 = 496",2,20 Marks,,,,
+As3Q9,"Given an array of size n, write a JavaScript program that performs the following operations:
+
+Find and print the sum of all positive integers in the array.
+Find and print the product of all negative integers in the array.
+Determine and print the count of even integers in the array.
+Determine and print the count of odd integers in the array.
+
+Test Case 1:
+
+Input: 
+n = 7 
+arr = [3, -5, 2, -7, 8, 0, 1]
+Output:
+Sum of positive integers: 14
+Product of negative integers: -35
+Count of even integers: 2
+Count of odd integers: 4
+
+Test Case 2:
+n = 0
+arr = []
+Output:
+Sum of positive integers: 0
+Product of negative integers: 1
+Count of even integers: 0
+Count of odd integers: 0
+
+Note: Assume the array and size of array are provided. Zero is even.",3,20 Marks,,,,
+As4Q10,"You have been asked to create a program to calculate the parking fee for a parking lot. The parking fee is based on how long a car has been parked. Here are the rules for calculating the fee:
+- If a car is parked for up to 2 hours, the fee is ₹30 per hour.
+- If a car is parked for more than 2 hours but less than or equal to 5 hours, the fee is ₹25 for the first 2 hours and ₹20 for each additional hour.
+- If a car is parked for more than 5 hours, the fee is ₹25 for the first 2 hours, ₹20 for the next 3 hours, and ₹15 for each additional hour beyond 5 hours.
+
+Write a JavaScript program that takes the number of hours a car has been parked as input and calculates the parking fee accordingly.
+
+Test Case 1:
+Input: 1
+Expected Output: 30
+Explanation: The car has been parked for 1 hour, so the fee is ₹30 per hour.
+
+Test Case 2:
+Input: 3
+Expected Output: 70
+Explanation: The car has been parked for 3 hours. For the first 2 hours, the fee is ₹25 per hour, and for the next hour, the fee is ₹20.
+
+Test Case 3:
+Input: 5
+Expected Output: 110
+Explanation: The car has been parked for 5 hours. For the first 2 hours, the fee is ₹25 per hour. For the next 3 hours, the fee is ₹20 per hour.
+
+Test Case 4:
+Input: 7
+Expected Output: 140 
+Explanation: The car has been parked for 7 hours. For the first 2 hours, the fee is ₹25 per hour. For the next 3 hours, the fee is ₹20 per hour. For the remaining 2 hours, the fee is ₹15 per hour.",1,10 Marks,,,,
+As4Q11,"Write a JavaScript program that takes a positive integer as input and checks if it is a perfect number. A perfect number is a positive integer where the sum of its factors (excluding itself) equals the number itself. Factors are whole numbers that you can multiply together to get the given number. For example, 6 is a perfect number because the sum of its factors (1, 2, and 3) equals 6.
+
+Your program should output ""Perfect"" if the input number is perfect, and ""Not Perfect"" otherwise.
+
+Test Cases:
+Input: 6
+Output: Perfect
+Explanation:
+6 is a perfect number because 1 + 2 + 3 = 6.
+
+Input: 1
+Output: Not Perfect
+Explanation: 1 is not considered a perfect number because its only factor is itself, which is not included in the sum.
+
+Input: 28
+Output: Perfect
+Explanation:
+28 is a perfect number because 1 + 2 + 4 + 7 + 14 = 28.
+
+Input: 12
+Output: Not Perfect
+Explanation:
+12 is not a perfect number because the sum of its factors (1, 2, 3, 4, and 6) does not equal 12.",2,20 Marks,,,,
+As4Q12,"Write a JavaScript program that takes two arrays of integers as input. The program should find and print the sum of common elements between the two arrays. The arrays have unique elements.
+
+Test Case 1:
+Input:
+length1= 4
+arr1 = [2, 4, 6, 8]
+
+length2= 4
+arr2 = [4, 8, 12, 16]
+
+Output: 12
+
+Explanation: 4 and 8 are common elements in both arrays, their sum is 12
+
+Test Case 2:
+Input:
+length1= 4
+arr1 = [1, 3, 5, 7]
+
+length2= 3
+arr2 = [7, 9, 11]
+
+Output: 7
+
+Explanation: 7 is the only common element in both the arrays
+
+Test Case 3:
+Input:
+length1= 3
+arr1 = [10, 20, 30]
+
+length2= 3
+arr2 = [40, 50, 60]
+
+Output: 0
+
+Explanation: There are no common elements in the given arrays",3,20 Marks,,,,
+As5Q13,,,,,,,
