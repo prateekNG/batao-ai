@@ -1,6 +1,6 @@
 ## Test Cases for JavaScript Open Book Assessment
 
-Here are the test cases for the JavaScript open book assessment, along with explanations for each case:
+Below are the test cases for the JavaScript open book assessment, along with explanations. Marks are distributed equally across the test cases for each problem.
 
 **Question 1: Vowel Replacement**
 
