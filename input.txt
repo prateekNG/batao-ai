@@ -1,74 +1,256 @@
-Below is a list of project ideas for react for learning react by building projects. 
-The list is divided into beginner and intermediate levels as well. Analyze the list and output a json in format below for each of the idea in the original list:
-{
-    "ideas":[{
-        "idea": , // the project idea
-        "description": , //basic description
-        "react concepts": , // an array of react concepts you'll learn by building this project: Components (Functional & Class-based), JSX, Props, State, Lifecycle Methods (and Hooks), Virtual DOM, Redux (Optional), Event Handling, Conditional Rendering, Lists & Keys, Forms
-        "complexity": , //the complexity of the project
-        "categories": ,// an array of categories the project belongs to: Art and Design, Auto and Vehicles, Beauty, Books and Reference, Business, Comics, Communications, Dating, Education, Entertainment, Events, Finance, Food and Drink, Health and Fitness, House and Home, Libraries and Demo, Lifestyle, Maps and Navigation, Medical, Music and Audio, News and Magazines, Parenting, Personalization, Photography, Productivity, Shopping, Social, Sports, Tools, Travel and Local, Video Players and Editors, Weather
-        "estimated time in hours":  // A rough estimate of time range for completing the project
-    },
-    ]
-}
+Analyze the below an open book coding assessment, for first-time programmers learning JavaScript, and generate testcases, 5 for the first four problems and 10 for the last problem, for an overall effective assessment of the solution provided by students. Provide explanations for each test case and the edge conditions it tests. Give the output in markdown table format.
 
-Here’s the list of 50+ beginner and intermediate level React project ideas to help you practice and enhance your skills:
 
-Beginner Level Projects
-1. To-Do List App: Create a simple to-do list app with features to add, mark as done, and delete tasks.
-2. Counter App: Build a counter application that increments or decrements a value when buttons are clicked.
-3. Calculator: Develop a basic calculator that performs arithmetic operations on user inputs.
-4. Random Quote Generator: Create an app that displays random quotes fetched from an API.
-5. Weather App: Build an app that fetches weather data based on user input location.
-6. Image Gallery: Design a gallery where users can view and search for images.
-7. BMI Calculator: Develop a BMI calculator that calculates the Body Mass Index based on user inputs.
-8. Timer/Stopwatch: Build a timer or stopwatch application with start, pause, and reset functionalities.
-9. Simple Blog: Create a basic blog platform where users can read and write posts.
-10. Recipe App: Develop an app that displays recipes, including ingredients and instructions.
 
-Intermediate Level Projects
-11. E-Commerce Website : Build an online store with features like product listings, cart, and checkout.
-12. Chat Application : Create a real-time chat app using libraries like Firebase or WebSocket.
-13. Movie/TV Show Database : Develop an app that fetches and displays movie or TV show information.
-14. Task Management App : Build a more advanced task management app with categories, labels, and due dates.
-15. Social Media Dashboard : Design a dashboard that displays social media analytics and statistics.
-16. Portfolio Website : Create a personal portfolio website to showcase your projects and skills.
-17. Expense Tracker : Develop an app to track and visualize personal expenses over time.
-18. Online Quiz App : Build an app that presents quizzes to users and provides scores at the end.
-19. Music Player : Create a basic music player with play, pause, skip, and volume controls.
-20. Job Board : Design a platform where employers can post jobs and users can apply for them.
-21. Note-Taking App : Develop an app for creating and managing notes with various formatting options.
-22. Weather Forecast App : Build an app that not only displays current weather but also forecasts.
-23. Booking System : Create an app for booking appointments, reservations, or tickets.
-24. Trello Clone : Develop a task management app similar to Trello with drag-and-drop functionality.
-25. Online Markdown Editor : Design an online markdown editor with real-time preview.
-26. Currency Converter : Build an app that converts currencies using real-time exchange rates.
-27. Language Learning App : Create an app to help users learn new languages through quizzes or flashcards.
-28. Fitness Tracking App : Develop an app for users to track their workouts and fitness progress.
-29. Recipe Sharing Platform : Design a platform where users can share their favorite recipes.
-30. Real Estate Listings : Build a real estate app to display property listings with filters and details.
-31. Task Scheduler : Develop an app that schedules tasks at specific times or intervals.
-32. Expense Sharing App : Create an app that allows users to split and track shared expenses among a group.
-33. Travel Itinerary Planner : Build a platform for users to plan and organize their travel itineraries.
-34. Music Streaming App : Design a music streaming app that plays songs based on user preferences.
-35. Job Application Tracker : Develop an app to keep track of job applications, interviews, and offers.
-36. Language Translation App : Build an app that translates text between different languages.
-37. Online Marketplace : Create a platform for users to buy and sell items online.
-38. Fitness Class Booking : Develop an app for users to book fitness classes at local gyms or studios.
-39. Interactive Maps : Build an app that displays interactive maps with custom markers and information.
-40. Polling/Voting App : Design an app for creating and participating in polls and surveys.
-41. Collaborative Code Editor : Develop an online code editor that multiple users can collaborate on in real time.
-42. Virtual Event Platform : Create an app for hosting virtual events, webinars, and conferences.
-43. Personal Finance Dashboard : Design an app that visualizes personal finance data and trends.
-44. Recipe Recommendation App : Build an app that recommends recipes based on user preferences.
-45. Health Monitoring App : Develop an app for users to track their health metrics, such as steps and calories.
-46. Task Automation App : Create an app that automates tasks using user-defined rules and triggers.
-47. Trivia Quiz Game : Build a trivia game with various categories and difficulty levels.
-48. Book Review Platform : Design a platform for users to review and rate books they’ve read.
-49. Collaborative Drawing App : Develop an app that allows multiple users to draw together in real time.
-50. Personal Journal App : Create a digital journaling app with rich text formatting and media support.
-51. E-Learning Platform : Build a platform for hosting online courses, lectures, and quizzes.
-52. Camping Trip Planner : Design an app that helps users plan and organize camping trips.
-53. Home Automation Control : Develop an app to control and monitor smart home devices.
-54. Language Exchange App : Create a platform where users can practice language skills with native speakers.
-55. Renting Marketplace : Build an app for renting items like tools, equipment, or party supplies.
+# Module 4 Open Book Assessment 
+
+(2 hours, 15+15+20+20+30 marks) 
+
+You can visit only the official JavaScript documentation during the test [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript). 
+
+
+## Question 1: Vowel Replacement (15 marks)
+
+Write a JavaScript function called _replaceVowels_ that takes a string as input and replaces all occurrences of vowels with specific characters. The function should replace and return the modified string:
+
+- a with #
+
+- e with &
+
+- i with !
+
+- o with @
+
+- u with $
+
+_Example Test Cases:_
+
+Input: "Hello, World!" 
+
+Output: "H\&ll@, W\@rld!"
+
+Input: "JavaScript is awesome!" 
+
+Output: "J#v#Scr!pt !s #w\&s\@m&!"
+
+Input: "This is a test." 
+
+Output: "Th!s !s # t\&st."
+
+_Explanation of Test Cases:_
+
+Test Case 1: 'e' is replaced with '&', 'o' is replaced with '@'.
+
+Test Case 2: 'a' is replaced with '#', 'e' is replaced with '&', 'i' is replaced with '!', 'o' is replaced with '@', 'u' is replaced with '$'.
+
+Test Case 3: 'i' is replaced with '!', 'a' is replaced with '#', 'e' is replaced with '&'.
+
+
+## Question 2: Capitalize the First Letter of Each Word (15 marks)
+
+Write a JavaScript function named _capitalizeWords_ that takes a string as input and returns a new string where the first letter of each word is capitalized while keeping the rest of the letters in lowercase.
+
+**_Input Format_**: A string containing one or more words separated by spaces.
+
+**_Output Format_**: A new string with the first letter of each word capitalized and the rest of the letters in lowercase.
+
+_Example Test Cases:_
+
+Input: "the quick brown fox jumps over the lazy dog"
+
+Expected Output: "The Quick Brown Fox Jumps Over The Lazy Dog"
+
+_Explanation_: Capitalizes the first letter of each word.
+
+Input: "javascript is awesome"
+
+Expected Output: "JavaScript Is Awesome"
+
+_Explanation_: Capitalizes the first letter of "javascript" and "awesome".
+
+Input: " hello world! "
+
+Expected Output: " Hello World! "
+
+_Explanation_: Capitalizes the first letter of "hello" and "world" and preserves leading and trailing spaces (there’s a space before “hello” and after “world!”, you need to keep it in the output)
+
+
+## Question 3: Reverse Words in a Sentence (20 marks)
+
+Write a JavaScript function named _reverseSentence_ that takes a string representing a sentence as input. The function should:
+
+1. Split the input sentence into individual words.
+
+2. Reverse the order of the words.
+
+3. Join the reversed words back into a new sentence, separated by spaces.
+
+4. Return the new reversed sentence as a string.
+
+**_Input Format_**: A string representing a sentence.
+
+**_Output Format_**: A string representing the sentence with the word order reversed.
+
+_Example Test Cases:_
+
+_Input: "Hello World, how are you?"___
+
+_Expected Output: "you? are how World, Hello"_
+
+_Explanation: The sentence is reversed, preserving punctuation and capitalization._
+
+_Input: "JavaScript is awesome"_
+
+_Expected Output: "awesome is JavaScript"_
+
+_Explanation: The order of the words "JavaScript", "is", and "awesome" is reversed._
+
+_Input: " This sentence has extra spaces. "_
+
+_Expected Output: "spaces. extra has sentence This"_
+
+_Explanation: Extra spaces between words are ignored during splitting and joining._
+
+
+## Question 4: Find the First Student with a Specific Grade (20 marks)
+
+You are tasked with building a system for managing student records. One of the core functionalities is to efficiently find specific students based on their academic performance. Implement a function named _findTargetGrade_ that takes an array of student objects and a target grade as input. The function should return the name of the first student in the array who has the specified grade. If no student with the target grade exists, the function should return "Student not found".
+
+**_Input Format_**: The input will be provided as two arguments (you can hardcode them for testing your function)
+
+- students: An array of objects, where each object represents a student and has the following properties:
+
+  - name: A string representing the student's name.
+
+  - grade: An integer representing the student's grade.
+
+- targetGrade: An integer representing the grade to search for.
+
+_Sample Input:_
+
+    const students = [
+      { name: "John", grade: 90 },
+      { name: "Alice", grade: 80 },
+      { name: "Bob", grade: 90 },
+      { name: "Eve", grade: 70 }
+    ];
+
+    const targetGrade = 90;
+
+**_Output Format_**: The function should return a string representing the name of the first student with the target grade. If no student with the target grade exists, the function should return "Student not found".
+
+_Sample Output:_
+
+    "John"
+
+_Note: You are encouraged to use your knowledge of array methods. Choose the most appropriate JavaScript methods and techniques to solve this problem._
+
+_Expected Test Cases:_
+
+_Test Case 1:_
+
+_Input:_
+
+students: \[ { name: "John", grade: 90 }, { name: "Alice", grade: 80 }, { name: "Bob", grade: 90 }, { name: "Eve", grade: 70 } ]
+
+targetGrade: 90
+
+_Expected Output:_ "John"
+
+_Explanation: Both John and Bob have the target grade, but John is placed before Bob in the array._ 
+
+_Test Case 2:_
+
+_Input:_
+
+students: \[ { name: "John", grade: 90 }, { name: "Alice", grade: 80 }, { name: "Bob", grade: 90 }, { name: "Eve", grade: 70 } ]
+
+targetGrade: 85
+
+_Expected Output:_ "Student not found"
+
+_Explanation: No students were found with a target grade of 85._
+
+_Test Case 3:_
+
+_Input:_
+
+students: \[ { name: "John", grade: 90 }, { name: "Alice", grade: 80 }, { name: "Bob", grade: 90 }, { name: "Eve", grade: 70 } ]
+
+targetGrade: 70
+
+_Expected Output:_ "Eve"
+
+_Explanation: Eve has the target grade._
+
+
+## Question 5: Find Students Enrolled for a Particular Course (30 marks)
+
+You are tasked with building a system to manage student records, including their academic performance and course enrollment. You need to implement a function named _enrolledStudents_ that takes an array of student objects and returns an array containing the names of all students enrolled in a specific course.
+
+**_Input Format_**: The input will be provided as two arguments (you can hardcode them for testing your function)
+
+- students: An array of objects, where each object represents a student and has the following properties:
+
+  - name: A string representing the student's name.
+
+  - courses: An array of strings representing the courses the student is enrolled in.
+
+- targetCourse: A string representing the course to filter by.
+
+_Sample Input:_
+
+    const students = [
+      { name: "John", courses: ["Math", "Science", "History"] },
+      { name: "Alice", courses: ["Science", "English", "Art"] },
+      { name: "Bob", courses: ["Math", "History", "Music"] },
+      { name: "Eve", courses: ["Science", "English"] }
+    ];
+
+    const targetCourse = "Science";
+
+**_Output Format_**: The function should return a new array containing the names of the students enrolled in the targetCourse. If no students are found enrolled in the targetCourse, the function should return an empty array.
+
+_Sample Output:_
+
+    ["John", "Alice", "Eve"]
+
+_Note: You are encouraged to use your knowledge of array methods. Choose the most appropriate JavaScript methods and techniques to solve this problem._
+
+_Example Test Cases:_
+
+_Test Case 1:_
+
+_Input_:
+
+students: \[ { name: "John", courses: \["Math", "Science", "History"] }, { name: "Alice", courses: \["Science", "English", "Art"] }, { name: "Bob", courses: \["Math", "History", "Music"] }, { name: "Eve", courses: \["Science", "English"] } ]
+
+targetCourse: "Science"
+
+_Expected Output:_ \["John", "Alice", "Eve"]
+
+_Explanation: Everyone except Bod has enrolled for “Science.”_
+
+_Test Case 2:_
+
+_Input:_
+
+students: \[ { name: "John", courses: \["Math", "Science", "History"] }, { name: "Alice", courses: \["Science", "English", "Art"] }, { name: "Bob", courses: \["Math", "History", "Music"] }, { name: "Eve", courses: \["Science", "English"] } ]
+
+targetCourse: "Music"
+
+_Expected Output:_ \["Bob"]
+
+_Explanation: Only Bob has enrolled for “Music.”_
+
+_Test Case 3:_
+
+_Input:_
+
+students: \[ { name: "John", courses: \["Math", "Science", "History"] }, { name: "Alice", courses: \["Science", "English", "Art"] }, { name: "Bob", courses: \["Math", "History", "Music"] }, { name: "Eve", courses: \["Science", "English"] } ]
+
+targetCourse: "Physics"
+
+_Expected Output:_ \[]
+
+_Explanation: No one has enrolled for “Physics.”_

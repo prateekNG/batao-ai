@@ -1,11 +1,15 @@
-Analyze the list of topics/concepts first time programming students, learning JavaScript as their first language, have learned so far, and a sample chat thread provided below (in markdown format) where a student is interacting with AI model to learn do-while loop. Generate a sequence of prompts, following a logical progression, a student (same target audience) might ask an AI to learn about nested loops in a seperate thread. 
+Analyze the list of topics/concepts first time programming students, learning JavaScript as their first language, have learned so far, and a sample chat thread provided below (in markdown format) where a student is interacting with AI model to learn do-while loop. Generate a sequence of prompts, following a logical progression, a student (same target audience) might ask an AI to learn about break and continue control statements.
 
-Some questions a student might ask: What does “nested” loops mean? When do you need to “nest” (put one loop inside the other) loop statements? What are the common applications of nested loops? How do you apply nested loops to solve problems? Things to keep in mind while using nested loops.
+Some questions a student might ask: 
+Control statements: What does “loop control statements” mean? Why do we need them and how do break and continue statements help write clean logic? How do multiple loop control statements relate to the nested loops enclosing them?
+Break:  What is the need for break statement? Where does the control flow go when a break statement executes? How else could we have done the same without using break statement? What are some common applications of break statements? 
+Continue: What is the necessity for continue statement? Where does the flow of control go after a continue statement? Is there any alternative to continue statements? Where do you need to use the continue statement?
+
 
 Don't forget to include necessary components of prompts like examplars, previously learned concepts, background of the learner, etc. Provide detailed context. Use simple Indian English.
 
 
-# List of topics learned by students learned so far:
+# Curriculum students have gone through so:
 
 1. The basic structure of loops
     - What is the basic structure of loops?
@@ -67,6 +71,13 @@ Don't forget to include necessary components of prompts like examplars, previous
                - map
                - reduce
 	        - Why should we use these methods instead of simple looping techniques?
+5. Nesting loops (putting loops within loops)
+    - What does “nested” loops mean?
+    - When do you need to “nest” (put one loop inside the other) loop statements? What are the common applications of nested loops?
+    - How do you apply nested loops to solve problems?
+    - Things to keep in mind while using nested loops.
+    - Let’s try using nested loops to solve real-world problems.
+    - Some external links to practice some challenging nested loop problems.
 
 # Chat thread for understanding the while loop:
 ## User

@@ -1,322 +1,156 @@
-## User
-
-I'm learning to code for the first time, using javascript. I'm new to English as well. Use this as context to explain why while loops are called "while" loops, with interesting real-world examples from Indian streets, along with javascript code snippets. Write the algorithm first then code in JS. Don't forget to include the output of the code snippet as well.
-
-## Assistant
-
-Sure, I'd be happy to help! 
-
-**Algorithm Explanation:**
-
-In programming, a "while" loop is a control flow statement that allows code to be executed repeatedly based on a given boolean condition. The loop continues to execute as long as the condition remains true. 
-
-Now, let's relate this to a real-world scenario from Indian streets. Consider a street food vendor selling delicious snacks like samosas. The vendor continues to sell samosas as long as there are customers waiting to buy them. Once there are no more customers, the vendor closes up shop and goes home. This is similar to how a while loop operates; it keeps executing a block of code as long as a certain condition holds true.
-
-**JavaScript Code:**
-
-Here's how you can implement a while loop in JavaScript, using the analogy of the street food vendor:
-
 ```javascript
-// Initialize the number of customers
-let customers = 5;
+// test-cases.js
 
-// While there are customers waiting, keep selling samosas
-while (customers > 0) {
-    console.log("Selling samosa to customer.");
-    customers--; // Decrease the number of customers after serving each one
-}
+const one = require('./one');
+const two = require('./two');
+const three = require('./three');
+const four = require('./four');
+const five = require('./five');
 
-console.log("No more customers. Closing up shop.");
+const testCases = {
+  one: [
+    { input: "Hello, World!", output: "H&ll@, W@rld!" },
+    { input: "JavaScript is awesome!", output: "J#v#Scr!pt !s #w&s@m&!" },
+    { input: "This is a test.", output: "Th!s !s # t&st." },
+    { input: "", output: "" }, // Edge case: Empty string
+    { input: "12345", output: "12345" } // Edge case: No vowels
+  ],
+  two: [
+    { input: "the quick brown fox jumps over the lazy dog", output: "The Quick Brown Fox Jumps Over The Lazy Dog" },
+    { input: "javascript is awesome", output: "Javascript Is Awesome" },
+    { input: " hello world! ", output: " Hello World! " }, // Edge case: Leading/trailing spaces
+    { input: "", output: "" }, // Edge case: Empty string
+    { input: "123 abc", output: "123 Abc" } // Edge case: String starting with a number
+  ],
+  three: [
+    { input: "Hello World, how are you?", output: "you? are how World, Hello" },
+    { input: "JavaScript is awesome", output: "awesome is JavaScript" },
+    { input: " This sentence has extra spaces. ", output: "spaces. extra has sentence This" },
+    { input: "", output: "" }, // Edge case: Empty string
+    { input: "oneword", output: "oneword" } // Edge case: Single word
+  ],
+  four: {
+    students: [
+      { name: "John", grade: 90 },
+      { name: "Alice", grade: 80 },
+      { name: "Bob", grade: 90 },
+      { name: "Eve", grade: 70 }
+    ],
+    tests: [
+      { targetGrade: 90, output: "John" },
+      { targetGrade: 85, output: "Student not found" },
+      { targetGrade: 70, output: "Eve" }
+    ]
+  },
+  five: {
+    students: [
+      { name: "John", courses: ["Math", "Science", "History"] },
+      { name: "Alice", courses: ["Science", "English", "Art"] },
+      { name: "Bob", courses: ["Math", "History", "Music"] },
+      { name: "Eve", courses: ["Science", "English"] }
+    ],
+    tests: [
+      { targetCourse: "Science", output: ["John", "Alice", "Eve"] },
+      { targetCourse: "Music", output: ["Bob"] },
+      { targetCourse: "Physics", output: [] }
+    ]
+  }
+};
+
+let totalMarks = 0;
+
+// Testing Question 1
+console.log("Question 1: Vowel Replacement (15 marks)");
+testCases.one.forEach((testCase, index) => {
+  const result = one.replaceVowels(testCase.input);
+  if (result === testCase.output) {
+    console.log(`Test Case ${index + 1}: Passed`);
+    totalMarks += 15 / testCases.one.length;
+  } else {
+    console.log(`Test Case ${index + 1}: Failed`);
+    console.log(`   Expected: ${testCase.output}`);
+    console.log(`   Got:      ${result}`);
+  }
+});
+
+// Testing Question 2
+console.log("\nQuestion 2: Capitalize the First Letter of Each Word (15 marks)");
+testCases.two.forEach((testCase, index) => {
+  const result = two.capitalizeWords(testCase.input);
+  if (result === testCase.output) {
+    console.log(`Test Case ${index + 1}: Passed`);
+    totalMarks += 15 / testCases.two.length;
+  } else {
+    console.log(`Test Case ${index + 1}: Failed`);
+    console.log(`   Expected: ${testCase.output}`);
+    console.log(`   Got:      ${result}`);
+  }
+});
+
+// Testing Question 3
+console.log("\nQuestion 3: Reverse Words in a Sentence (20 marks)");
+testCases.three.forEach((testCase, index) => {
+  const result = three.reverseSentence(testCase.input);
+  if (result === testCase.output) {
+    console.log(`Test Case ${index + 1}: Passed`);
+    totalMarks += 20 / testCases.three.length;
+  } else {
+    console.log(`Test Case ${index + 1}: Failed`);
+    console.log(`   Expected: ${testCase.output}`);
+    console.log(`   Got:      ${result}`);
+  }
+});
+
+// Testing Question 4
+console.log("\nQuestion 4: Find the First Student with a Specific Grade (20 marks)");
+testCases.four.tests.forEach((testCase, index) => {
+  const result = four.findTargetGrade(testCases.four.students, testCase.targetGrade);
+  if (result === testCase.output) {
+    console.log(`Test Case ${index + 1}: Passed`);
+    totalMarks += 20 / testCases.four.tests.length;
+  } else {
+    console.log(`Test Case ${index + 1}: Failed`);
+    console.log(`   Expected: ${testCase.output}`);
+    console.log(`   Got:      ${result}`);
+  }
+});
+
+// Testing Question 5
+console.log("\nQuestion 5: Find Students Enrolled for a Particular Course (30 marks)");
+testCases.five.tests.forEach((testCase, index) => {
+  const result = five.enrolledStudents(testCases.five.students, testCase.targetCourse);
+  if (JSON.stringify(result) === JSON.stringify(testCase.output)) {
+    console.log(`Test Case ${index + 1}: Passed`);
+    totalMarks += 30 / testCases.five.tests.length;
+  } else {
+    console.log(`Test Case ${index + 1}: Failed`);
+    console.log(`   Expected: ${testCase.output}`);
+    console.log(`   Got:      ${result}`);
+  }
+});
+
+console.log(`\nTotal Marks: ${totalMarks}`);
 ```
 
-**Output:**
-
-```
-Selling samosa to customer.
-Selling samosa to customer.
-Selling samosa to customer.
-Selling samosa to customer.
-Selling samosa to customer.
-No more customers. Closing up shop.
-```
-
-In this example, the loop continues to execute as long as the variable `customers` is greater than 0. With each iteration of the loop, a samosa is sold to a customer and the `customers` variable decreases by 1. Once there are no more customers (`customers` becomes 0), the loop exits and the message "No more customers. Closing up shop." is printed.
-
-## User
-
-Great!
-Let's dive deep into the basic structure of while loops. Break the structure into components, and explain what goes where.
-
-## Assistant
-
-Absolutely! Let's break down the basic structure of a while loop in JavaScript into its components:
-
-1. **Initialization:** This is where you initialize any variables that will be used in the loop. It's optional, but typically you'll want to set up some initial conditions before the loop starts.
-
-2. **Condition:** This is the boolean expression that determines whether the loop should continue executing or not. If the condition evaluates to true, the loop body will be executed. If it evaluates to false, the loop will stop.
-
-3. **Loop Body:** This is the block of code that gets executed repeatedly as long as the condition remains true. It typically contains the actions or operations you want to perform repeatedly.
-
-4. **Update:** This is where you update the variables that are involved in the condition. It's crucial to update these variables within the loop body to eventually make the condition false and exit the loop. If you forget to update them, you might end up with an infinite loop.
-
-Here's a breakdown of the components using pseudo-code:
-
-```plaintext
-1. Initialization:
-   Initialize any variables used in the loop.
-   This step is optional but often used to set initial conditions.
-
-2. while (Condition):
-   while (boolean_expression) {
-
-3. Loop Body:
-   Execute the block of code inside the loop.
-   This is where the main actions or operations take place.
-
-4. Update:
-   Update the variables involved in the condition.
-   This step is crucial to eventually make the condition false.
-   If you forget this step, you might create an infinite loop.
-
-   }
-```
-
-Putting it all together, the structure of a while loop looks like this in JavaScript:
-
-```javascript
-// 1. Initialization
-// Initialize any variables used in the loop
-let i = 0;
-
-// 2. while (Condition)
-// While the condition is true, execute the loop body
-while (i < 5) {
-
-    // 3. Loop Body
-    // Execute the block of code inside the loop
-    console.log("Loop iteration:", i);
-
-    // 4. Update
-    // Update the variables involved in the condition
-    i++; // Increment i to eventually make the condition false
-}
-```
-
-This loop will output "Loop iteration: 0" through "Loop iteration: 4", and then terminate because the condition `i < 5` will become false when `i` becomes 5.
-
-## User
-
-Is it necessary to update at the end of the loop body?
-
-## Assistant
-
-No, it's not strictly necessary to update the variables at the end of the loop body. You can update the variables at any point within the loop body, as long as the condition is eventually made false. However, it's a common practice to update the variables at the end of the loop body for clarity and readability.
-
-Updating the variables at the end of the loop body ensures that all the operations and actions you want to perform within the loop are completed before moving on to the next iteration. It also makes it clear to anyone reading your code that the variables are being updated as part of the loop's logic.
-
-Here's an example to illustrate updating the variables at different points within the loop body:
-
-```javascript
-let i = 0;
-
-while (i < 5) {
-    console.log("Loop iteration:", i);
-
-    // Updating i at the end of the loop body
-    i++; // Increment i to eventually make the condition false
-}
-
-// Output: Loop iteration: 0, Loop iteration: 1, Loop iteration: 2, Loop iteration: 3, Loop iteration: 4
-```
-
-In this example, `i` is updated at the end of the loop body. However, you could also update `i` at the beginning or in the middle of the loop body, like this:
-
-```javascript
-let i = 0;
-
-while (i < 5) {
-    // Updating i at the beginning of the loop body
-    i++; // Increment i to eventually make the condition false
-
-    console.log("Loop iteration:", i);
-}
-
-// Output: Loop iteration: 1, Loop iteration: 2, Loop iteration: 3, Loop iteration: 4, Loop iteration: 5
-```
-
-Both approaches are valid, but updating at the end often reads more naturally and makes the loop's logic clearer.
-
-## User
-
-Can we update in the condition itself?
-
-## Assistant
-
-Yes, it's possible to update variables within the condition itself, but it's not a recommended practice. 
-
-While you technically can update variables within the condition of a loop, doing so can make the code less readable and harder to understand. It's generally considered good practice to keep the loop condition focused solely on the boolean expression that determines whether the loop should continue or not.
-
-Updating variables within the condition can also lead to confusion or unexpected behavior, especially if multiple variables are involved or if the update affects the evaluation of the condition in a non-obvious way.
-
-Here's an example of updating a variable within the condition of a loop:
-
-```javascript
-let i = 0;
-
-while ((i++) < 5) {
-    console.log("Loop iteration:", i);
-}
-
-// Output: Loop iteration: 1, Loop iteration: 2, Loop iteration: 3, Loop iteration: 4, Loop iteration: 5
-```
-
-In this example, `i` is incremented (`i++`) within the loop condition itself. While this code works and produces the expected output, it's less clear and may confuse readers who are not familiar with this coding style.
-
-It's generally better to update variables explicitly within the loop body, as it makes the code more readable and easier to understand. Here's the same example with the variable update moved to the loop body:
-
-```javascript
-let i = 0;
-
-while (i < 5) {
-    console.log("Loop iteration:", i);
-    i++; // Update i within the loop body
-}
-
-// Output: Loop iteration: 0, Loop iteration: 1, Loop iteration: 2, Loop iteration: 3, Loop iteration: 4
-```
-
-This approach is clearer and more in line with standard coding practices. It explicitly shows where the variable is being updated, making the code easier to follow.
-
-## User
-
-Nice! 
-But when do I use "while" loop, can I not use "for" loop for all the cases? Explain in simple Indian English with interesting example. I'm a first-time programmer, be mindful of that when introducing new concepts in your reply.
-
-## Assistant
-
-Absolutely! Think of "while" and "for" loops like different tools in a toolbox. They both help you do repetitive tasks in your code, but they're suited for different situations.
-
-Let's start with the "while" loop. Imagine you're eating your favorite snack, say, a plate of golgappas. You keep eating them until you're full. Now, imagine you're telling your friend about it:
-
-**You:** "I kept eating golgappas until I was full."
-
-This is just like a "while" loop. You keep doing something as long as a condition is true. In this case, the condition is "until I was full."
-
-Now, let's say you're at a cricket match. You want to count how many runs your favorite player scores in each inning. You know how many innings there are, and you want to count through each one. So, you might say:
-
-**You:** "I'll count the runs for each inning. There are 4 innings in total."
-
-This is more like a "for" loop. It's like you have a set number of times you want to do something, and you're going to do it for each time in the set. In this case, you're going to count for each inning, and you know there are 4 innings.
-
-In simple terms, you use a "while" loop when you're not sure how many times you'll need to do something, like eating golgappas until you're full. You use a "for" loop when you know exactly how many times you need to do something, like counting runs for each inning in a cricket match.
-
-So, while you could technically use a "for" loop for everything, "while" loops are handy when you're not sure how many times you'll need to repeat a task. They give you more flexibility. Just like if you're not sure how many golgappas you'll eat!
-
-## User
-
-great real-world examples, can you list down some more interesting examples for each type of loop?
-
-## Assistant
-
-Of course! Here are some more fun real-world examples for both "while" and "for" loops:
-
-**"While" Loop Examples:**
-
-1. **Waiting in Line:** Imagine you're waiting in line for a ticket to your favorite movie. You'll keep waiting until the ticket counter closes or until you get your ticket.
-
-2. **Exploring a Maze:** Picture yourself navigating through a maze. You'll keep moving forward until you reach the exit or until you're lost forever!
-
-3. **Fishing Trip:** When you're fishing, you'll keep casting your line until you catch a fish or until it's time to pack up and go home.
-
-4. **Studying for an Exam:** You'll keep studying your notes until you feel confident about the material or until it's time to take the exam.
-
-5. **Downloading Files:** If you're downloading multiple files from the internet, you'll keep downloading until all the files are downloaded or until your internet connection fails.
-
-**"For" Loop Examples:**
-
-1. **Counting Sheep:** If you're trying to fall asleep and counting sheep, you might count from 1 to 100. You know exactly how many sheep you'll count.
-
-2. **Checking Emails:** Suppose you have 10 unread emails in your inbox. You'll go through each email, one by one, until you've read them all.
-
-3. **Making Pizza:** If you're making pizza and need to roll out the dough, you might roll it 10 times to get the perfect thickness.
-
-4. **Planting Seeds:** When you're planting seeds in your garden, you might plant 20 seeds in each row. You'll repeat this process for each row in your garden.
-
-5. **Solving Math Problems:** If you have 10 math problems to solve, you'll solve each problem one after the other until you've solved them all.
-
-These examples show how "while" loops are great for situations where you're uncertain about how many times you'll repeat a task, while "for" loops are perfect when you know exactly how many times you need to perform a task. Both loops help you automate repetitive tasks efficiently!
-
-## User
-
-Awesome! What are some popular real-world applications of while loops in programming?
-
-## Assistant
-
-While loops are widely used in programming for various real-world applications. Here are some popular examples:
-
-1. **User Input Validation:** In programs where users need to input data, such as a username or password, while loops are used to continuously prompt the user until they provide valid input. For example, prompting the user to enter a password until it meets certain criteria like length or complexity.
-
-2. **Simulation and Gaming:** While loops are often used in game development and simulations to continuously update the game state based on user input or other events. For example, in a game where the player moves through a maze, a while loop might continuously update the player's position until they reach the end of the maze or encounter an obstacle.
-
-3. **Data Processing:** While loops are used in data processing tasks where data needs to be processed until a certain condition is met. For example, processing records in a database until all records have been processed or until a specific record is found.
-
-4. **Network Communication:** While loops are used in network programming to continuously receive and process data from network connections until a certain condition is met, such as the end of a message or the termination of a connection.
-
-5. **File Handling:** While loops are used in file handling tasks to read or write data from files until the end of the file is reached or until a certain condition is met. For example, reading lines from a text file until a specific line is found or writing data to a file until a certain amount of data has been written.
-
-These are just a few examples, but while loops are versatile and can be used in many other real-world applications wherever there's a need to repeat a task until a condition is met.
-
-## User
-
-I read about infinite loops, what is that?
-
-## Assistant
-
-An infinite loop is a loop that continues to execute indefinitely, without ever terminating. In other words, the loop condition always remains true, so the loop keeps running forever. This can happen accidentally if the loop condition is not properly defined or if the loop's update mechanism does not eventually make the loop condition false.
-
-In programming, infinite loops are usually unintended and considered a bug because they can cause the program to become unresponsive or consume excessive resources, leading to system slowdown or even crashes.
-
-Here's an example of an infinite loop in JavaScript:
-
-```javascript
-while (true) {
-    console.log("This is an infinite loop!");
-}
-```
-
-In this example, the loop condition `true` is always true, so the loop will continue to execute indefinitely, printing "This is an infinite loop!" to the console over and over again.
-
-Infinite loops can also occur due to logical errors in the loop condition or the update mechanism. For example, forgetting to update the loop variable inside the loop body can lead to an infinite loop:
-
-```javascript
-let i = 0;
-
-while (i < 5) {
-    console.log("This loop will never end!");
-    // Forgot to increment i
-}
-```
-
-In this case, `i` will always remain less than 5, so the loop will never terminate.
-
-It's essential to be careful when writing loops to ensure that they terminate properly. Using clear and well-defined loop conditions and update mechanisms can help avoid accidentally creating infinite loops. Additionally, using loop constructs like "for" loops can sometimes reduce the risk of accidentally creating infinite loops, as they have built-in mechanisms for controlling loop iteration.
-
-## User
-
-Explain some popular intentional uses of infinite loops in simple Indian English?
-
-## Assistant
-
-Intentional uses of infinite loops might seem strange at first, but they actually have some clever applications in programming:
-
-1. **Server Programs:** Imagine you're running a server that needs to be up and running all the time, ready to respond to requests. An infinite loop can keep the server program alive, continuously listening for incoming connections. It's like keeping the doors of your shop open 24/7, ready to serve customers whenever they arrive.
-
-2. **Real-Time Systems:** In systems where tasks need to be executed continuously without interruption, like controlling traffic lights or monitoring sensor data, an infinite loop ensures that the system is always active and responsive. It's like a traffic policeman directing traffic at a busy intersection all day, every day.
-
-3. **Embedded Systems:** In devices like microwave ovens or vending machines, an infinite loop can keep the device operational, waiting for user input or sensor readings. It's similar to a watchman guarding a treasure, always on alert for any movement.
-
-4. **Game Loops:** In game development, an infinite loop is often used to continuously update the game state, handle user input, and render graphics. It's like a puppeteer pulling strings to animate characters on a stage, creating an immersive gaming experience.
-
-5. **Event Handling:** In graphical user interfaces (GUI) or web applications, an infinite loop can be used to listen for events such as mouse clicks or keyboard presses, ensuring that the application remains interactive. It's like a magician performing tricks at a carnival, captivating the audience with every move.
-
-In each of these cases, the infinite loop serves a specific purpose, keeping the program running smoothly and efficiently. Just like how a clock keeps ticking without ever stopping, intentional infinite loops keep programs ticking along, ready to handle whatever comes their way.
+**Explanation:**
+
+1. **Import Functions:** The script begins by importing the functions from your solution files (one.js, two.js, etc.).
+2. **Test Cases:** It defines an object `testCases` to hold test cases for each question. 
+   - For Questions 1-3, each test case is an object with `input` and `output` properties.
+   - For Questions 4-5, the `testCases` object has a `students` array and a `tests` array to hold test data.
+3. **Testing Logic:**
+   - For each question, the script iterates through the test cases.
+   - It calls the corresponding function with the test case's input.
+   - It compares the function's output to the expected output.
+   - If the outputs match, it logs "Passed"; otherwise, it logs "Failed" along with the expected and actual outputs.
+4. **Grading:** 
+   - The script uses a `totalMarks` variable to keep track of the student's score.
+   - For each passed test case, it adds the corresponding question's marks divided by the number of test cases for that question. 
+   - Finally, it prints the `totalMarks`.
+
+**How to Use:**
+
+1. **Save:** Save the provided code as `test-cases.js` in the same directory as your solution files (one.js, two.js, etc.).
+2. **Run:** Open your terminal, navigate to the directory, and run the script using `node test-cases.js`.
+
+This script will execute the test cases, compare the results with the expected outputs, and provide you with a grade based on the correctness of your solutions.
