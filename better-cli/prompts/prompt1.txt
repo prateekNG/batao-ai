@@ -1,4 +1,4 @@
-Below is a simple script for a basic cli for giving prompt to gemini AI through an input file and receiving an output file. I want to make a better cli, which can be invoked with just the command name "batao" along with prompt, and have added flags optional like, but not limited to: output file, model name/code, temperature, configuring defaults etc. I want to it to be modular so that I can add more AI model APIs in future. Generate source code and files in syntax highlighted markdown format.
+Below is a simple script for a basic cli for giving prompt to gemini AI through an input file and receiving an output file. Analyze to get the basic idea to help me make a better cli starting from scratch, which can be invoked with just the command name "batao" (bash alias or something) followed by prompt, and have optional flags: output file, model name/code, temperature, configuring defaults, etc. I want to it to be modular so that I can add more AI model APIs in future. Generate source code and files in syntax highlighted markdown format. Also provide instructions to make the cli tool.
 
 batao.js
 ```javascript
