@@ -1,5 +1,3 @@
-Read the guide below and add the coding challenge/project they have to make.
-
 ## 👫 Buddy Up for Git & GitHub Challenge! 👫
 
 Let's get started! This challenge will help you get comfortable using Git and GitHub with a buddy.  You'll learn how to:
@@ -127,7 +125,7 @@ Let's get started! This challenge will help you get comfortable using Git and Gi
 2. **Merge the updated main branch into your feature branch:**
    -  `git checkout featureB`
    -  `git merge upstream/main` 
-   - This incorporates any changes Partner A made to the main branch while you were working. 
+   -  This incorporates any changes Partner A made to the main branch while you were working. 
 
 3. **Resolve merge conflicts (if any):**
    - **What's a merge conflict?** Sometimes, when merging branches, Git encounters conflicting changes. It'll mark these conflicts in your files, and you need to decide which changes to keep.

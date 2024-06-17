@@ -1,0 +1,45 @@
+Make a definitive step-wise guide, along with a cheat-sheet or quick reference, for the below git concepts and commands. The guide is targetted at first-time programmers learning to use git for version control. Use simple Indian English and add interesting, real-life, relatable, examples. Use markdown with syntax highlighting
+
+Git Commands and Concepts:
+- What problem does git solve?
+    - Hands-on
+- What is version control?
+- Git concepts:
+    - working directory
+    - staging
+    - commits
+    - branch
+    - merge
+- Setting git config
+    - git config --global user.email "personal@email.com"
+    - git config --global user.name "Your Name"
+- Basic git command and what (else) you can do with them
+    - init
+    - status
+    - add <filename>
+    - add .
+    - commit -m "message"
+    - commit -am "message" [OPTIONAL]
+    - git diff (what can you compare and how)
+    - git log 
+    - git show (what can you see and how)
+    - git show CommitID
+    - git branch
+    - git checkout
+
+Keywords that students must understand:
+- working directory
+- repository
+- version control
+- file status: untracked, modified, added
+- stage?
+- unstage?
+- commit
+- log
+- show
+- diff
+- merge
+- branch
+- checkout
+- merge
+- HEAD

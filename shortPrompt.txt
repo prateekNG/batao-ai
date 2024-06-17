@@ -1,0 +1,1 @@
+how many committees of 5 can be formed from 3 groups of 5 members each, such that there's at least one member from each group

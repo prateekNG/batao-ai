@@ -1,0 +1,25 @@
+Review, correct (if required) and explain the following code, by breaking it down into simple pieces, in Hinglish (a mix of English and Hindi, popular in India) for beginner/intermediate JS learner. Explain by applying the same for a real-life example along with code.
+
+function run(taskDef) {
+    let task = taskDef();
+    let result = task.next();
+
+    function step() {
+        if (!result.done) {
+            result = task.next(result.value);
+            step();
+        }
+    }
+    step();
+}
+
+function fetchData() {
+    return function(callback) {
+        setTimeout(() => callback(null, "Hi!"), 50);
+    };
+}
+
+run(function*() {
+    let data = yield fetchData();
+    console.log(data); // "Hi!"
+});

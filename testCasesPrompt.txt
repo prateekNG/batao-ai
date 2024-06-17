@@ -1,0 +1,72 @@
+The coding problem below is worth 20 marks. Please create weighted test cases to evaluate solutions for this problem, ensuring to cover important edge conditions. Avoid repeating any test cases provided in the problem statement. Refer to the input and output format in the problem statement, and do not go beyond them. Also, make test cases for explicitly stated conditions only, don't assume other real life properties of hashtags which student might not be aware of. Don't forget to include a test case for all words as hashtags.
+
+Problem:  Hashtag Extractor (20 marks)
+You are building a social media analytics tool and need to extract hashtags from Instagram captions. Each caption is represented as a string, and hashtags are words or phrases prefixed with the "#" symbol.
+
+You need to write a JavaScript function named extractHashtags that takes a string representing an Instagram caption and extracts all hashtags, converting them to lowercase and removing duplicates.
+
+Function: extractHashtags(caption)
+
+Input Format: A string representing an Instagram caption.
+
+Output Format: Return an array of strings, containing all unique lowercase hashtags extracted from the caption.
+
+Example Test Cases:
+Input: "hello world #FirstTweet"
+Output: ["firsttweet"]
+Explanation: For "hello world #FirstTweet", the hashtag "#FirstTweet" is extracted, converted to lowercase, and returned in an array.
+
+Input: "Enjoying the #sunshine #SummerVibes #Sunshine"
+Output: ["sunshine", "summervibes"]
+Explanation: For "Enjoying the #sunshine #SummerVibes #Sunshine", the hashtags "#sunshine" and "#SummerVibes" are extracted. Duplicates are removed, and the remaining hashtags are converted to lowercase.
+
+Input: "No hashtags here!"
+Output: []
+Explanation: Since there are no hashtags in the input string, an empty array is returned.
+Problem 3: Finding Orders in a City (30 marks)
+You are building an order tracking system for an online store. Your task is to create a JavaScript function called getOrderIdsForCity that finds all orders going to a specific city and returns a list of their order IDs.
+
+Function: getOrderIdsForCity(orders, targetCity)
+
+Input Format:
+orders: A list of orders. Each order is an object with these properties:
+orderId (number): A unique ID for the order.
+city (string): The city where the order is being delivered.
+productName (string): The name of the product being ordered.
+targetCity (string): The city you want to find orders for.
+
+Output Format: Return a new list containing only the orderId values of orders going to the targetCity.
+
+Example Test Cases:
+Input 1:
+const orders = [
+  { orderId: 101, city: "Mumbai", productName: "Laptop" },
+  { orderId: 102, city: "Delhi", productName: "Phone" }
+];
+const targetCity = "Mumbai";
+Output 1: [101]
+Explanation: Only order 101 is going to Mumbai.
+
+Input 2:
+const orders = [
+  { orderId: 103, city: "Chennai", productName: "Tablet" },
+  { orderId: 104, city: "Chennai", productName: "Charger" },
+  { orderId: 105, city: "Kolkata", productName: "Keyboard" }
+];
+const targetCity = "Chennai";
+Output 2: [103, 104] 
+Explanation: Both orders 103 and 104 are going to Chennai.
+
+Input 3:
+const orders = [];
+const targetCity = "Hyderabad";
+Output 3: []
+Explanation: There are no orders in the list.
+
+Input 4:
+const orders = [
+  { orderId: 106, city: "Delhi", productName: "Monitor" }
+];
+const targetCity = "Mumbai";
+Output 4: []
+Explanation: No orders in the list are going to Mumbai.

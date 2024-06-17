@@ -1,5 +1,3 @@
-Below is the list of topic covered in a module of our curriculum introducing JavaScript to those learning to code for the first time. Need you to make 8-10 mcq questions for the "getting started" section. Make sure to ask questions that require students to think, rather than just remember things, like asking them what is a correct analogy for a given concept, or what could be the reason behind using a certain technology or approach. Also for each problem, put the correct answers at the first option.
-
 ## Javascript for Beginners: Key Concepts & Keywords
 
 **I. Getting Started**
