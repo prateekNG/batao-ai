@@ -1,5 +1,5 @@
 {
-    "apiKey": "YOUR_API_KEY", 
-    "defaultModel": "gemini-1.5-flash",
-    "defaultTemperature": 0.4
-  }
+  "apiKey": null,
+  "defaultModel": "gemini-1.5-flash",
+  "defaultTemperature": 0.4
+}

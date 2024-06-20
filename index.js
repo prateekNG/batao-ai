@@ -2,12 +2,35 @@
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const fs = require('fs');
 const path = require('path');
-const { program } = require('commander'); // Import program directly
+const { program } = require('commander'); 
+const prompt = require('prompt-sync')({ sigint: true }); // For secure input
 
 // Load configuration 
-const config = require(path.join(__dirname, 'config.json'));
+const configPath = path.join(__dirname, 'config.json');
+const config = require(configPath);
 
-// Initialize Google Generative AI
+// Function to set the API key
+function setApiKey() {
+    console.log("API key not found. Please enter your Google Generative AI API key:");
+    const apiKey = prompt("API Key: "); 
+
+    if (!apiKey) {
+        console.error("Error: API key cannot be empty.");
+        process.exit(1);
+    }
+
+    // Update config.json
+    config.apiKey = apiKey;
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+    console.log("API key saved successfully!");
+}
+
+// Check for API key and prompt if necessary
+if (!config.apiKey) {
+    setApiKey();
+}
+
+// Initialize Google Generative AI (after potentially setting the API key)
 const googleAI = new GoogleGenerativeAI(config.apiKey);
 
 // Model name mapping for easier user input
