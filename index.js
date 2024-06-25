@@ -2,17 +2,37 @@
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const fs = require('fs');
 const path = require('path');
-const { program } = require('commander'); 
+const os = require('os');
+const { program } = require('commander');
 const prompt = require('prompt-sync')({ sigint: true }); // For secure input
 
-// Load configuration 
-const configPath = path.join(__dirname, 'config.json');
-const config = require(configPath);
+// Load configuration from user's home directory
+const homeDir = os.homedir();
+const configDir = path.join(homeDir, '.batao');
+const configPath = path.join(configDir, 'config.json');
+
+// Ensure config directory exists
+if (!fs.existsSync(configDir)) {
+    fs.mkdirSync(configDir);
+}
+
+// Load or initialize configuration
+let config = {
+    apiKey: null,
+    defaultModel: "gemini-1.5-flash",
+    defaultTemperature: 0.4
+};
+
+if (fs.existsSync(configPath)) {
+    config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+} else {
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+}
 
 // Function to set the API key
 function setApiKey() {
     console.log("API key not found. Please enter your Google Generative AI API key:");
-    const apiKey = prompt("API Key: "); 
+    const apiKey = prompt("API Key: ");
 
     if (!apiKey) {
         console.error("Error: API key cannot be empty.");
@@ -21,7 +41,7 @@ function setApiKey() {
 
     // Update config.json
     config.apiKey = apiKey;
-    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2), { mode: 0o600 }); // Ensure only the user can read/write
     console.log("API key saved successfully!");
 }
 
@@ -36,7 +56,7 @@ const googleAI = new GoogleGenerativeAI(config.apiKey);
 // Model name mapping for easier user input
 const modelMapping = {
     'flash': 'gemini-1.5-flash',
-    'pro': 'gemini-1.5-pro' 
+    'pro': 'gemini-1.5-pro'
 };
 
 // Function to interact with an AI model
@@ -50,7 +70,7 @@ async function generateText(model, prompt, temperature) {
 
         // Generate text response
         // geminiModel.generationConfig.responseMimeType = "application/json"
-        const result = await geminiModel.generateContent(prompt)
+        const result = await geminiModel.generateContent(prompt);
         const response = await result.response;
 
         return response.text(); // Return the generated text
@@ -71,7 +91,7 @@ program
     .option('-o, --output <file>', 'Save the output to a file.')
     .action(async (options) => {
         try {
-            let prompt = ''; 
+            let prompt = '';
 
             if (options.input) {
                 // Read prompt from input file
@@ -91,7 +111,7 @@ program
             // Generate response from the selected model
             const response = await generateText(model, prompt, options.temperature);
 
-            // Output handling 
+            // Output handling
             if (options.output) {
                 fs.writeFileSync(options.output, response, 'utf8');
                 console.log('Response saved to:', options.output);

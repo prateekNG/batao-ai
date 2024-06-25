@@ -1,10 +1,10 @@
 {
   "name": "batao",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "This Node.js script interacts with Google's Gemini generative AI model to generate text content based on a given input prompt. The input prompt is read from a specified file, and the generated response is written to an output file.",
   "main": "index.js",
   "bin": {
-    "batao": "./index.js"
+    "batao": "index.js"
   },
   "scripts": {
     "start": "node index.js"
@@ -15,6 +15,6 @@
     "prompt-sync": "^4.2.0"
   },
   "keywords": [],
-  "author": "",
+  "author": "Prateek Gole (prateek.g@navgurukul.org)",
   "license": "ISC"
 }
