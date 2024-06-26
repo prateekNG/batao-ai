@@ -31,7 +31,7 @@ if (fs.existsSync(configPath)) {
 
 // Function to set the API key
 function setApiKey() {
-    console.log("API key not found. Please enter your Google Generative AI API key:");
+    console.log("API key not found. Please enter a Google Generative AI API key. Get one here: https://makersuite.google.com/app/apikey");
     const apiKey = prompt("API Key: ");
 
     if (!apiKey) {
