@@ -12,7 +12,9 @@
   "dependencies": {
     "commander": "^10.0.0",
     "@google/generative-ai": "^0.11.4",
-    "prompt-sync": "^4.2.0"
+    "prompt-sync": "^4.2.0",
+    "node-fetch": "^3.3.2"
+
   },
   "keywords": [],
   "author": "Prateek Gole (prateek.g@navgurukul.org)",
