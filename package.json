@@ -6,16 +6,55 @@
   "bin": {
     "batao": "index.js"
   },
+  "engine": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "commander": "^10.0.0",
     "@google/generative-ai": "^0.11.4",
-    "prompt-sync": "^4.2.0",
-    "node-fetch-native": "^1.6.4"
+    "commander": "^10.0.0",
+    "prompt-sync": "^4.2.0"
   },
-  "keywords": [],
+  "keywords": [
+    "generative-ai",
+    "google",
+    "gemini",
+    "text-generation",
+    "text-generation-api",
+    "text-generation-model",
+    "text-generation-tool",
+    "text-generation-script",
+    "text-generation-nodejs",
+    "text-generation-javascript",
+    "text-generation-cli",
+    "text-generation-command-line",
+    "text-generation-generative-ai",
+    "text-generation-google",
+    "text-generation-gemini",
+    "text-generation-batao",
+    "batao",
+    "batao-cli",
+    "batao-command-line",
+    "batao-nodejs",
+    "batao-javascript",
+    "batao-generative-ai",
+    "batao-google",
+    "batao-gemini",
+    "batao-text-generation",
+    "batao-text-generation-api",
+    "batao-text-generation-model",
+    "batao-text-generation-tool",
+    "batao-text-generation-script",
+    "batao-text-generation-nodejs",
+    "batao-text-generation-javascript",
+    "batao-text-generation-cli",
+    "batao-text-generation-command-line",
+    "batao-text-generation-generative-ai",
+    "batao-text-generation-google",
+    "batao-text-generation-gemini"
+  ],
   "author": "Prateek Gole (prateek.g@navgurukul.org)",
   "license": "ISC"
 }
