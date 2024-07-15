@@ -1,5 +1,3 @@
-Replace the input markdown file in the 6th example with an input file with a prompt to review the code or fix a certain issue followed by the code for HTML, CSS, and JS files all embedded in a single file using triple backtick along with the relative path of the files.
-
 # Batao: Your AI Assistant on the Command Line
 
 Batao is a command-line interface (CLI) tool that allows you to interact with Google's powerful Gemini generative AI models directly from your terminal.  Write stories, translate languages, generate code, and more!
@@ -45,7 +43,7 @@ sudo npm install -g batao
 Before using Batao, you need to obtain a Google Generative AI API key. 
 
 1.  **Get your API Key:** Visit the [Google Generative AI Console](https://developers.google.com/generative-ai/docs/api-keys) to get your key.
-2.  **First Run:** Run `batao` in your terminal. You will be prompted to enter your API key, which will be saved securely in a configuration file (`config.json`). 
+2.  **First Run:** Run `batao` in your terminal. You will be prompted to enter your API key, which will be saved securely in a configuration file (`~/.batao/config.json`). 
 
 ## Usage
 
