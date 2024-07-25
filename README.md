@@ -42,7 +42,7 @@ sudo npm install -g batao
 
 Before using Batao, you need to obtain a Google Generative AI API key. 
 
-1.  **Get your API Key:** Visit the [Google Generative AI Console](https://developers.google.com/generative-ai/docs/api-keys) to get your key.
+1.  **Get your API Key:** Visit the [Google Generative AI Console](https://aistudio.google.com/app/apikey) to get your key.
 2.  **First Run:** Run `batao` in your terminal. You will be prompted to enter your API key, which will be saved securely in a configuration file (`~/.batao/config.json`). 
 
 ## Usage
