@@ -66,6 +66,7 @@ batao [prompt] [options]
 * `-t, --temperature <temperature>`: Control the creativity of the output (0.0 - 1.0). Higher values result in more creative (and potentially less predictable) output. Default: 0.4
 * `-i, --input <file>`: Read the prompt from the specified file.
 * `-o, --output <file>`: Save the generated text to a file.
+* `-r, --review <files...>`: Review code files for logical issues, potential typos, and efficiency suggestions. Provide a space-separated list of file paths. 
 
 > [!TIP] 
 > ### Using Markdown for Code and Rich Input:
@@ -121,69 +122,13 @@ batao -i prompt.txt -o output.txt
 ```
 This command reads a prompt from a file named `prompt.txt` and saves the generated response to a file named `output.txt`.
 
-**6. Request code review and get efficiency suggestions:**
-
-Create a file named `website_code.md` with the following content:
-
-````markdown
-I'm building a simple website to display my photography portfolio. Can you review the following HTML, CSS, and JavaScript code for any potential improvements?  Also, I'm not sure my JavaScript image gallery is very efficient. Can you suggest a better approach?
-
-index.html
-```html
-<!DOCTYPE html>
-<html>
-<head> 
-<title>My Portfolio</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div id="gallery">
-    </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
-```
-
-styles.css
-```css
-#gallery {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-img {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-}
-```
-
-script.js
-```javascript
-const gallery = document.getElementById('gallery');
-const images = [
-  'image1.jpg',
-  'image2.jpg',
-  'image3.jpg',
-  // ... more images
-];
-
-for (let i = 0; i < images.length; i++) {
-  const img = document.createElement('img');
-  img.src = images[i];
-  gallery.appendChild(img);
-}
-```
-````
-
-Run the command:
+**6. Request code review for multiple files and get efficiency suggestions:**
 
 ```bash
-batao -i website_code.md -o code_review_results.md
+batao -r script.js style.css index.html -o review_results.txt
 ```
 
-This command instructs `batao` to read the code and request from `website_code.md`, analyze it, and provide feedback in the `code_review_results.md` file. 
+This command instructs `batao` to review the code in `script.js`, `style.css`, and `index.html` for potential improvements and provide feedback in the `review_results.txt` file. 
 
 > [!TIP]
 > ## Gemini AI Models: Pro vs. Flash
@@ -199,7 +144,7 @@ This command instructs `batao` to read the code and request from `website_code.m
 
 Batao can be an invaluable tool for programmers:
 
-* **Code Feedback:**  Ask Batao to review your code by providing it within a markdown file using code blocks. Get suggestions for improvement, potential errors to look for, and best practice reminders.
+* **Code Feedback:**  Ask Batao to review your code by providing it within a markdown file using code blocks or by using the `-r` flag. Get suggestions for improvement, potential errors to look for, and best practice reminders.
 * **Debugging Help:**  Describe the bug you're encountering along with relevant code snippets in a file.  Batao can help identify the source of the problem and may even suggest solutions.
 * **Practice Coding Challenges:** Ask Batao to create programming challenges for you.  This is a great way to solidify concepts and prepare for technical interviews.
 * **Code Explanation:** Don't understand a concept or block of code?  Ask Batao to explain it in simpler terms by putting the code in a Markdown file and adding your question as a prompt. This is like having an instant coding tutor.
