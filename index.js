@@ -89,11 +89,29 @@ program
     .option('-t, --temperature <temperature>', 'The temperature for text generation.', parseFloat, config.defaultTemperature)
     .option('-i, --input <file>', 'Read the prompt from a file.')
     .option('-o, --output <file>', 'Save the output to a file.')
+    .option('-r, --review <files...>', 'Review the code files provided (space-separated list)')
     .action(async (options) => {
         try {
             let prompt = '';
+            
+            if (options.review) {
+                // Get the list of file paths
+                const reviewFilePaths = options.review;
 
-            if (options.input) {
+                for (const reviewFilePath of reviewFilePaths) {
+                    if (fs.existsSync(reviewFilePath)) {
+                        const fileContent = fs.readFileSync(reviewFilePath, 'utf-8');
+                        const fileExtension = reviewFilePath.split('.').pop();
+                        prompt += `Filename: ${reviewFilePath}\n\n\`\`\`${fileExtension}\n${fileContent}\n\`\`\`\n\n`;
+                    } else {
+                        console.error(`The specified file does not exist: ${reviewFilePath}`);
+                        process.exit(1);
+                    }
+                }
+                // file or files depending on the number of files
+
+                prompt = `Please review the following code ${reviewFilePaths.length > 1 ? 'files' : 'file'} for logical issues, typos, and provide suggestions to improve them or make them more efficient:\n\n${prompt}`;
+            } else if (options.input) {
                 // Read prompt from input file
                 prompt = fs.readFileSync(options.input, 'utf-8');
             } else {
@@ -107,7 +125,7 @@ program
 
             // Map model shortcut to full name
             const model = modelMapping[options.model] || options.model;
-
+            
             // Generate response from the selected model
             const response = await generateText(model, prompt, options.temperature);
 
