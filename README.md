@@ -67,6 +67,7 @@ batao [prompt] [options]
 * `-i, --input <file>`: Read the prompt from the specified file.
 * `-o, --output <file>`: Save the generated text to a file.
 * `-r, --review <files...>`: Review code files for logical issues, potential typos, and efficiency suggestions. Provide a space-separated list of file paths. 
+* `-a, --attachment <files...>`: Attach additional files to the prompt for the AI model to consider. Provide a space-separated list of file paths.
 
 > [!TIP] 
 > ### Using Markdown for Code and Rich Input:
@@ -129,6 +130,14 @@ batao -r script.js style.css index.html -o review_results.txt
 ```
 
 This command instructs `batao` to review the code in `script.js`, `style.css`, and `index.html` for potential improvements and provide feedback in the `review_results.txt` file. 
+
+**7. Attach a data file to the prompt:**
+
+```bash
+batao "Analyze the data in this file and generate a report." -a data.csv -o report.txt
+```
+
+This command instructs `batao` to analyze the data in `data.csv` and generate a report in `report.txt`. 
 
 > [!TIP]
 > ## Gemini AI Models: Pro vs. Flash
