@@ -90,10 +90,17 @@ program
     .option('-i, --input <file>', 'Read the prompt from a file.')
     .option('-o, --output <file>', 'Save the output to a file.')
     .option('-r, --review <files...>', 'Review the code files provided (space-separated list)')
+    .option('-a, --attachment <files...>', 'Attach additional files (space-separated list)')
     .action(async (options) => {
         try {
             let prompt = '';
-            
+
+            // Check for mutual exclusivity
+            if (options.review && options.attachment) {
+                console.error('Error: The --review and --attachment options cannot be used together.');
+                process.exit(1);
+            }
+
             if (options.review) {
                 // Get the list of file paths
                 const reviewFilePaths = options.review;
@@ -108,7 +115,6 @@ program
                         process.exit(1);
                     }
                 }
-                // file or files depending on the number of files
 
                 prompt = `Please review the following code ${reviewFilePaths.length > 1 ? 'files' : 'file'} for logical issues, typos, and provide suggestions to improve them or make them more efficient:\n\n${prompt}`;
             } else if (options.input) {
@@ -118,8 +124,24 @@ program
                 // No input file, prompt should be provided as remaining arguments
                 prompt = program.args.join(' ');
                 if (!prompt) {
-                    console.error('Error: Please provide a prompt or use the -i option to specify an input file.');
+                    console.error('Error: Please provide a prompt ahead of other options, or use the -i option to specify an input file.');
                     process.exit(1);
+                }
+            }
+
+            // Handle attachments
+            if (options.attachment) {
+                const attachmentFilePaths = options.attachment;
+
+                for (const attachmentFilePath of attachmentFilePaths) {
+                    if (fs.existsSync(attachmentFilePath)) {
+                        const fileContent = fs.readFileSync(attachmentFilePath, 'utf-8');
+                        const fileExtension = attachmentFilePath.split('.').pop();
+                        prompt += `Filename: ${attachmentFilePath}\n\n\`\`\`${fileExtension}\n${fileContent}\n\`\`\`\n\n`;
+                    } else {
+                        console.error(`The specified attachment file does not exist: ${attachmentFilePath}`);
+                        process.exit(1);
+                    }
                 }
             }
 
@@ -137,6 +159,7 @@ program
                 console.log(response);
             }
         } catch (error) {
+            console.error('Error:', error);
             process.exit(1);
         }
     });
